@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- sets the defaul zoom for ANY device -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- set compatibility for your browsers -->
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+	<title>CommCube: About Us</title>
+
+	<!-- Import Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Import Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <link rel="shortcut icon" href="./assets/images/icon-panda.png">
+
+    <!-- General Style for all -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+
+    <!-- Custom Style for Home -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/about.css">
+
+
+
+
+
+</head>
+<body>
+
+
+<i id="scrlBtn" class="arrow up"></i>
+
+
+
+    
+
+
+
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-fade bg-nav">
+      <a class="navbar-brand" href="./index.html">
+      	<img src="./assets/images/commcube-logo.jpg" class="d-inline-block align-top commcube-brand" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-toggle" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">Home<span class="sr-only"></span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="./events.html">Events</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" href="./about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" data-toggle="modal" data-target="#signModal">Sign up</a>
+          </li>
+          <!-- forum link
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forum</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Events</a>
+              <a class="dropdown-item" href="#">Schedule</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+<!-- Modal -->
+
+<div class="modal fade text-dark" id="signModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          	<h5 class="modal-title" id="contactModalTitle">
+              Sign up
+            </h5>
+          	 <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <div class="modal-body">
+           <form>
+           	<!-- 
+            <form id="careers" method="POST" enctype="multipart/form-data">
+            
+					<?php
+						//Data for submittion				
+						if(isset($_POST['submitted1']))
+						{
+							$error = array();
+							//carFname, carLname, carEmail, carNum
+							(!empty($_POST['carFname'])) ? $carFname = ucwords(mysqli_real_escape_string($dbc, $_POST['carFname'])) : $error[] = 'Blank First Name field.' ;
+							(!empty($_POST['carLname'])) ? $carLname = ucwords(mysqli_real_escape_string($dbc, $_POST['carLname'])) : $error[] = 'Blank Last Name field.' ;
+							(!empty($_POST['carEmail'])) ? $carEmail = mysqli_real_escape_string($dbc, $_POST['carEmail']) : $error[] = 'Email field is required.' ;
+							(!empty($_POST['carNum'])) ? $carNum = mysqli_real_escape_string($dbc, $_POST['carNum']) : $error[] = 'Contact number field should not be empty.' ;
+											
+							$q = "select * from recaptcha_key order by id desc limit 1";
+							$r = @mysqli_query($dbc, $q);
+												
+							$row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+							$privatekey = $row['priKey'];
+											
+							if ((($_FILES['carFile']['type'] == 'application/msword')
+							|| ($_FILES['carFile']['type'] == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'))
+							&& ($_FILES['carFile']['type'] < 20000))
+							{
+								if ($_FILES['carFile']['error'] > 0)
+								{
+									echo 'An error has occured while uploading the file. Please try again later.';
+								}
+								else
+								{
+									if (file_exists('ccs4uadmin/uploadedresumes/' . $_FILES['carFile']['name'])) { $error[] = 'You already had submitted this resume.'; }
+								}
+							}
+							else
+							{
+								$error[] = 'Invalid file format or maximum file size exceeded.';
+							}
+											
+							if(empty($error))
+							{
+								$dateNgayon = date('Y-m-d H:i:s');
+								$ip = $_SERVER['REMOTE_ADDR'];
+								$full = $carLname . ', ' . $carFname;
+												
+								$filetype = $_FILES['carFile']['type'];
+								$filesize = round(($_FILES['carFile']['size'] / 1024), 2) . ' kb.';
+								$fileDir = 'http://ccs4uadmin/uploadedresumes/';
+										
+								$lastOcc = strrpos($_FILES['carFile']['name'],'.');
+								$fileLen = strlen($_FILES['carFile']['name']);
+								$fileExt = substr($_FILES['carFile']['name'],$lastOcc,$fileLen - $lastOcc);
+								$fullFile = str_replace(' ','',ucwords($carLname) . ucwords($carFname)) . '-' . date('m-d-y') . $fileExt;
+												
+								$q = "insert into uploadresume (res_fname,res_lname,res_full,res_email,res_num,res_date,res_ip,res_key,res_filename,res_filedir,res_filetype,res_filesize,res_tag) values ('$carFname','$carLname','$full','$carEmail','$carNum','$dateNgayon','$ip','1','$fullFile','$fileDir','$filetype','$filesize','no')";
+								$r = @mysqli_query($dbc, $q);
+								
+								
+								
+								//sends the email to jobs_hr@callcentersolution4u.com
+								$file = $_FILES['carFile']['tmp_name'];
+								require_once('send1.php');
+
+								
+								//saves to a folder				
+								move_uploaded_file($_FILES['carFile']['tmp_name'], "folder/path/" . $fullFile);
+												
+								echo ($r) ? 'Your resume has successfully been sent.' : 'An error has occured while uploading the form. Please try again later.';
+												
+							}
+							else
+							{
+								echo '<div><span class=""><b>An error has occured:</b><br><ul>';
+								foreach($error as $errors)
+								{
+									echo '<li style="color:red;">' . $errors . '</li>';
+								}
+								echo '</ul></span></div>';
+							}
+									
+						}
+									
+					?>            	
+            	
+            	 -->
+            	
+              <div class="form-group">
+                <label for="carFname">Full Name</label>
+                <input type="text" class="form-control" name="carFname">
+              </div>                          
+              <div class="form-group">
+                <label for="carEmail">Email</label>
+                <input type="email" class="form-control" name="carEmail">
+              </div>
+              <div class="form-group">
+                <label for="carFile">Attach Resume</label>
+                <input type="file" class="form-control attach-f" name="carFile">
+                <!-- <input type="hidden" name="submitted1" /> -->
+              </div>              
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<section class="p-top bg-o-white">
+	
+	<!-- <iframe class="frame" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcommcube%2Fvideos%2F1669177433145694%2F&show_text=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> -->
+
+	
+
+	<div class="row">
+		
+
+	</div>
+
+</section>
+
+
+
+<section class="c-content">
+	
+	<div class="container-fluid staffs-commcube">
+		
+<div class="row pt-3">
+		<div class="offset-lg-2 mx-auto offset-sm-12 margin-left-20p">
+			<h2 class="title-about"><i class="fas fa-plus"></i> About Us</h2>
+			<p>The peple behind Commcube BPO Services</p>
+		</div>
+	</div>
+
+		
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-sm-12">
+			
+			<div class="key-col">
+				<figure>
+				  <img class="img-staff" src="./assets/images/staff-1.png">
+				  <figcaption><span class="about-name">Audi Raiza Valmonte</span><br />
+				  				<span class="about-title">Founder CEO</span>
+				  </figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-12">
+
+			<div class="key-col">
+				<figure>
+				  <img class="img-staff" src="./assets/images/staff-2.png">
+				  <figcaption><span class="about-name">James Frederick Valmonte</span><br />
+				  			<span class="about-title">Founder</span><br />
+				  			<span class="about-title">Lead Trainer</span>
+				  	
+				  </figcaption>
+				</figure>
+			</div>
+
+
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-12">
+			<div class="key-col">
+				<figure>
+				  <img class="img-staff" src="./assets/images/staff-3.png">
+				  <figcaption><span class="about-name">Mitchell Baltazar</span><br />
+				  			<span class="about-title">Founder</span><br />
+				  			<span class="about-title">Sourcing Manager</span>
+				  </figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-12">
+			
+			<div class="key-col">
+				<figure>
+				  <img class="img-staff" src="./assets/images/staff-4.png">
+				  <figcaption><span class="about-name">Joseph Olorocisimo</span><br />
+				  		<span class="about-title">Talent Acquisition</span>
+				  		
+				  </figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="row staff-content text-indent">
+		<div class="col-lg-6 col-md-6 col-sm-12">
+			<p class="f-b">CommCube was established in February 2015 for the sole purpose of helping FIRST TIMERS and BEGINNERS to get hired in a Call Center for FREE.</p>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12">
+			<p class="f-b">&#34; <em>As long as the is ONE person who want to work in a call center, we will help. And we will not stop.</em>&#34; - James Valmonte, Founder &amp; Lead Trainer</p>
+		</div>
+
+		
+
+	</div>
+
+</section>
+
+<section class="bg-o-white p-5">
+
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			
+		<div class="bg-white p-5 box-shadow">
+			<h3 class="our-mission-header">Our Mission</h3>
+			<p>We are from CommCube BPO Support Services. We provide recruiting, sourcing and skills evaluation and screening of BPO and Call Center applicants for its clients. We address the growing HR needs of BPO and Call Centers by keeping abreast of all the latest recruitment issues. We provide HR services to minimize company expenses and duty for workers by bringing you the best employees. 
+				We are the BEST and the fastest growing provider of BPO recruitment services in Cavite. Because of this, we received an overwhelming response from our co-Caviteños. They yearn to learn more about working in the BPO Industry, thus sourcing hundreds of potential hires per week. By partnering with CommCube, we make you accessible to the millions of people in Cavite.</p>
+
+				<p><em>As long as there is ONE person who wants to work in a call center, we will help. And we will not stop</em></p>
+		</div>	
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-6 bg-white box-shadow">
+			<div class="p-5">
+
+				<h4 class="font-w-7">The main service integrated with our HR Outsourcing:</h4>
+				<ul>
+					<li>Recruiting and Sourcing Talented Applicants</li>
+					<li>Skills Evaluation and Screening of Applicants</li>
+					<li>Near-Hire Training</li>
+				</ul>
+				<p>CommCube BPO Support Services also works hand in hand with the local government unit to help jobseekers secure their future through stable jobs and unite them with the top BPO and Call Centers in the Philippines. We also organize career orientations in the different Universities in Cavite thus, pooling fresh graduates straight to you.</p>
+</div>
+			
+		</div>
+	</div>
+	</div>
+	
+</section>
+
+
+
+<footer>
+
+<div class="f-container padding-top-50">
+
+	<div class="f-content">
+	<div class="container">
+		<div class="row">
+
+
+
+
+			<!-- Contact Us -->
+			<div class="footer-c col-lg-4 col-sm-12 text-left margin-top-40p">
+
+
+				<nav>
+
+					<ul class="list-unstyled">
+						<li>
+							<h4 class="footer-title pt-5">Contact Us<span class="title-under"></span></h4>
+						</li>
+						<li class="padding-left-20">
+							<br>
+							<p><i class="far fa-clock"></i> Open: 10:00 AM - 6:00 PM</p>
+						</li>
+						<li class="padding-left-20">							
+							<p><i class="fas fa-mobile-alt"></i> Mobile: 0932 250 0290</p>
+						</li>
+						<li class="padding-left-20">							
+							<p><i class="fas fa-map-marker"></i> 3rd Level FRC Mall (Puregold Imus)
+Imus, Cavite</p>
+						</li>
+						<li class="padding-left-20">
+							<p><i class="fas fa-at"></i> Email address: info@commcube.com</p>
+						</li>
+
+
+					</ul>
+
+				</nav>
+
+
+			</div>
+
+
+			<!-- Social Media -->
+			<div class="footer-c col-lg-4 col-sm-12 text-left margin-top-40p">
+
+
+        <nav class="social">
+       
+          
+        <h4 class="footer-title pt-5">Connect with Us<span class="title-under"></span></h4>
+        <p class="text-center soc-fonts">
+          <a href="https://www.facebook.com/commcube/" class="padding-left-20"><i id="soc-icon1" class="fab fa-facebook-square animated"></i></a>
+          <a href="#" class="padding-left-20"><i id="soc-icon2" class="fab fa-twitter animated"></i></a>
+          <a href="#" class="padding-left-20"><i id="soc-icon3" class="fab fa-instagram animated"></i></a>
+        </p>
+
+<form>
+        <div class="form-group align-items-center">
+			    <input type="text" class="form-control" id="fname" placeholder="Full Name">
+			  </div>
+        	  <div class="form-group">
+			    <input type="email" class="form-control" id="email" placeholder="sample@example.com">
+			  </div>
+        	  <div class="form-group">
+			    
+			    <textarea placeholder="Leave a message..." class="form-control" id="message" rows="3"></textarea>
+			  </div>
+			      <div class="my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+        </form>
+
+
+
+        </nav>
+
+
+
+		</div>
+
+
+			<!-- Location -->
+			<div class="footer-c col-lg-4 col-sm-12 text-center margin-top-40p">
+
+			<h4 class="footer-title pt-5">Find Us<span class="title-under"></span></h4>
+				<section>
+					<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.5024367327669!2d120.94294405715289!3d14.424916098528207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d25f4b0099d7%3A0xfe99d5fbcb2e22fb!2sCommCube+BPO+Support+Services!5e0!3m2!1sen!2sph!4v1537332554633" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+
+			</div>
+
+
+		</div>   <!-- end of row for footer -->
+
+		</div>
+		<div class="center text-center copyright"><small class="text-center">Commcube | @ 2018</small></div>
+
+		</div>
+
+	</div> <!-- End of Container for footer -->
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+   	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Waypoints JS -->
+     <script src="./assets/js/noframework.waypoints.min.js"></script>
+     
+    <!-- Javascript applied to all -->
+    <script src="./assets/js/custom.js" type="text/javascript"></script>	
+
+    <!-- This page javascripts -->
+    <script src="./assets/js/about.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

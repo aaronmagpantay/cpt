@@ -1,0 +1,202 @@
+
+/* Test CSS */
+/*.test{
+  border:1px solid black;
+}
+
+.event-post-container{
+  border:1px solid black;
+}*/
+
+/* End of Test CSS */
+
+
+
+.event-title{
+  font-weight: 700;
+}
+
+
+.p-top{
+  padding-top: 75px;
+}
+
+
+.event-carousel{
+  margin-bottom: 20px;
+}
+
+.event-post-container img{
+  height: 150px;
+  width: 200px;
+  max-width: 250px;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+
+p.date-posted{
+ color: hsl(0, 0%, 45%);   
+}
+
+p.desc{
+ color: hsl(0, 0%, 25%);  
+}
+
+.container{
+  padding: 0 5%;
+  min-height: 100vh;
+}
+
+.btn-read-more{
+  background-color: #0099cc;
+  color: white;
+/*  position: absolute;
+  bottom: 0;
+  right: 10px;*/
+}
+
+.btn-read-more span{
+  color: white;
+}
+
+
+
+
+
+.bg-o-white{
+  background-color: #f7f7f7;
+}
+
+.box-shadow{
+  box-shadow: 0 4px 6px 0 hsla(0 , 0%, 0%, 0.2);
+}
+
+.events-inner{
+  min-height: 50vh;
+  background-color: white;
+}
+
+
+
+#scrlBtn{
+  border-color: lightblue;
+}
+
+
+/* Section 2 */
+.sec-2{
+  background-color: #f2f2f2;
+
+}
+
+.sec-2 h2{
+  font-weight: 700;
+  line-height: 2;
+}
+
+.desc{
+  font-weight: 400;
+}
+
+.img-family{
+  width: 90%;
+  margin-left:5%;
+  box-shadow:  0 4px 6px hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 30px;
+}
+
+
+.article-container{
+  padding: 50px;
+}
+
+
+.back{
+width: 93px;
+  margin: 0 auto 20px;
+}
+
+
+.btn-back{
+  background-color: #0099cc;
+  color: white;
+}
+
+
+
+/*Small Devides*/
+@media only screen and (max-width: 400px) { 
+
+.profile p{
+  font-size: .5em;
+}
+
+.profile h2{
+  font-size: 1.3em;
+}
+
+.profile h3{
+  font-size: .8em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+.h2-about-staff{
+  text-align: center;
+}
+
+
+/*.frame{
+  height: 50vh;
+}*/
+
+
+}
+
+/*Medium Devices*/
+@media only screen and (min-width: 451px) and (max-width: 768px) { 
+
+
+.profile p{
+  font-size: .8em;
+}
+
+.profile h2{
+  font-size: 1.5em;
+}
+
+.profile h3{
+  font-size: 1em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+
+
+}
+
+/*Large Devices*/
+@media only screen and (min-width: 769px) { 
+
+
+.frame{
+  height: 58vh;
+}
+
+ }
+
+ @media only screen and (min-width: 770px) and (max-width: 992px) { 
+
+
+
+
+ }
+
+  @media only screen and (min-width: 1201px) { 
+
+
+ }

@@ -1,0 +1,355 @@
+/* Style for all pages */
+
+
+/*Custom Styles*/
+.center{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.prlx { 
+    /* The image used */
+    background-image: url("../images/bg-body.jpg");
+
+    /* Set a specific height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.commcube-brand{
+  height: 40px;
+  width: 140px;
+}
+
+
+/*style for scroll*/
+
+p.scroll-text{
+  color:white;
+}
+
+
+
+
+
+
+.container1{
+  background-image: url("../../assets/images/bg-jumbotron.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+
+.overlay-black{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 15%;
+  /*background-color: rgba();*/
+}
+/* Home Custom Styles */
+#home-jumbo{
+    background: url('../images/carousel-img-1.jpg'); 
+    background-size: cover;
+}
+
+#home-jumbo h2, #home-jumbo p{
+  color: white;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.key-process{
+  padding-top: 20px;
+  background-color: #f6c838;
+  min-height: 300px;
+}
+
+.key-col{
+  padding-top: 10%;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.key-col p{
+  border-radius: 50px;
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  z-index: 100;
+}
+
+.key-col figure{
+  width: 100%;
+}
+
+.key-col figcaption{
+  color: black;
+  margin: 10px auto;
+  width: 200px;
+
+}
+
+.key-col i, .key-col p, .key-col figcaption{
+  text-align: center;
+}
+
+.key-col p{
+  margin: 0 auto;
+}
+
+.key-col i{
+  padding-top: 20px;
+  color: black;
+  font-size: 2em;
+  z-index: 101;
+}
+
+.key-font{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+/*Profile Style*/
+
+.profile{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: linear-gradient(141deg, rgba(137,247,254, 0.5) 0%, rgba(31,200,219, 0.5) 51%, rgba(102,166,255, 0.5) 75%);
+}
+
+.c-content{
+  min-height: 300px;
+  background-color: #fafafa;
+  border-bottom: lightblue 1px solid;
+  border-top: lightblue 1px solid;
+}
+
+.c-content-home{
+  width: 100%;
+}
+
+.c-content-height{
+  min-height: 250px;
+  padding-top: 25px;
+}
+
+.bg-color{
+  height: 100%;
+   /*background-color: #d3d3d3;*/
+  
+}
+
+.c-content h5{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.tools-icon1{
+  height: 30px;
+  width: 50px;
+}
+
+.tools-icon{
+  height: 30px;
+  width: 30px;
+}
+.c-capstones{
+  height: 100vh;
+  background-image: url("../images/c-bg-content.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.c-skills{
+  height: 100vh;
+  background-image: url("../images/c-bg-skills.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+h2.name{
+  margin: 0 auto;
+  background-color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+
+}
+
+h3.title{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 15px auto;
+  width: 50%;
+
+}
+
+#me{
+  height: 200px;
+  width:200px;
+  border-style: solid;
+  border-radius: 50%;.
+  border-width: 5px;
+  border-color: white;
+  margin-top: 50px;
+}
+
+.about{
+  color:white;
+  padding: 4px;
+  background-color: #333;
+  line-height: 1.5;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 450px;
+  margin: 0 auto
+}
+
+.mid-logo{
+  width: 100%;
+  position: relative;
+}
+
+.tag-logo{
+  position: absolute;
+  top:-99px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+/* Footer Styles */
+
+
+.contact-f{
+  padding-top: 50px;
+
+}
+
+.f-container{
+  background-color: #e5e5e5;
+  min-height: 375px;
+  padding: 20px 0;
+}
+
+.f-content{
+  background-color:  #0099cc;
+  height: 100%;
+}
+
+.map-google{
+  width: 250px;
+  height: 200px;
+}
+
+
+
+.copyright{
+  padding-bottom: 20px;
+}
+
+/*.footer{
+  color:white;
+  padding: 4px;
+  line-height: 1.5;
+  font-size: .8em;
+  border-radius: 5px;
+}*/
+
+/*
+h2 defaul
+2
+h3 1.75
+
+*/
+/*Small Devides*/
+@media only screen and (max-width: 400px) { 
+
+.profile p{
+  font-size: .5em;
+}
+
+.profile h2{
+  font-size: 1.3em;
+}
+
+.profile h3{
+  font-size: .8em;
+}
+
+#home-jumbo{
+  height: 40vh;
+}
+
+
+}
+
+/*Medium Devices*/
+@media only screen and (min-width: 451px) and (max-width: 768px) { 
+
+
+.profile p{
+  font-size: .8em;
+}
+
+.profile h2{
+  font-size: 1.5em;
+}
+
+.profile h3{
+  font-size: 1em;
+}
+
+#home-jumbo{
+  height: 40vh;
+}
+
+}
+
+/*Large Devices*/
+@media only screen and (min-width: 769px) { 
+
+
+ }
+
+
+
+/* Bootstarp Custom layouts */
+
+.jumbotron {
+  background-size: 100% 100%;
+  color: #b0bec5;
+  margin-bottom: 0;
+}
+

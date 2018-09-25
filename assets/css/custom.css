@@ -1,0 +1,532 @@
+/*
+For testing
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../../assets/images/p-loader.gif) center no-repeat #fff;
+}*/
+
+.client-title > h3{
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Section 2 */
+
+.card-container {
+  cursor: pointer;
+  height: 100px;
+  perspective: 600;
+  position: relative;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all .3s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card img{
+  height: 100%;
+  width: 100%;
+}
+
+.card .back {
+  background: #fafafa;
+  color: #141414;
+  line-height: 100px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+
+
+/*Custom Styles*/
+.center{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container-sec-2{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.overview{
+  text-indent: 50px;
+}
+
+
+.prlx { 
+    /* The image used */
+    background-image: url("../images/bg-body.jpg");
+
+    /* Set a specific height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+/** This is for the video background**/
+
+.bg-vid{
+  height: 100%;
+  position: relative;
+}
+
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;f
+}
+
+
+#video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;  }
+video { display: block; width: 100%; height: auto; }
+
+.fullsize-video-bg { height: 100%; overflow: hidden; }
+
+/** dark overlay
+.fullsize-video-bg:before { content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+.fullsize-video-bg:after { content: ""; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC); background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+**/
+
+.fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+.fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
+
+
+.fullsize-video-bg:before { 
+  content: ""; 
+  background: rgba(114,45,0,.35); 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 1; 
+}
+
+.visit{
+  position: relative;
+  top: 20px;
+}
+
+
+.tagline-left {
+    /*left: -30%;*/
+    color: #E8E8E8;
+}
+.tagline {
+    position: absolute;
+    top: 30%;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 0.75;
+}
+
+.tagline .tg-part2 {
+    margin-left: 3px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;   
+}
+
+.tagline .tg-part3 {
+    font-size: 2em;
+    margin-left: -6px;
+}
+
+.tagline .tg-part4 {
+    float: left;
+    font-weight: 700;
+    margin-left: 17px;
+    margin-right: 5px;
+    letter-spacing: -2px;
+    line-height: 0.72;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+
+
+
+
+
+/* Scroll */
+.page{
+  min-height: 100vh;
+}
+
+
+
+
+/* Section 2 */
+
+
+
+h2{
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.desc{
+  font-weight: 400;
+}
+
+.img-family{
+  width: 90%;
+  margin-left:5%;
+  box-shadow:  0 4px 6px hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 30px;
+}
+
+
+.container1{
+  background-image: url("../../assets/images/bg-jumbotron.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+/* Carousel Home */
+.carousel-item img{
+  height: 80vh;
+}
+
+
+
+/* Home Custom Styles */
+#home-jumbo{
+    background: url('../images/carousel-img-1.jpg') no-repeat center; 
+    background-size: cover;
+}
+
+
+/*Profile Style*/
+
+.profile{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: linear-gradient(141deg, rgba(137,247,254, 0.5) 0%, rgba(31,200,219, 0.5) 51%, rgba(102,166,255, 0.5) 75%);
+}
+
+.c-content{
+  min-height: 300px;
+  background-color: #fafafa;
+  border-bottom: lightblue 1px solid;
+  border-top: lightblue 1px solid;
+}
+
+
+.c-content-height{
+  min-height: 250px;
+  padding-top: 25px;
+}
+
+.bg-color{
+  height: 100%;
+   /*background-color: #d3d3d3;*/
+  
+}
+
+.c-content h5{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.tools-icon1{
+  height: 30px;
+  width: 50px;
+}
+
+.tools-icon{
+  height: 30px;
+  width: 30px;
+}
+.c-capstones{
+  height: 100vh;
+  background-image: url("../images/c-bg-content.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.c-skills{
+  height: 100vh;
+  background-image: url("../images/c-bg-skills.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+h2.name{
+  margin: 0 auto;
+  background-color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+
+}
+
+h3.title{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 15px auto;
+  width: 50%;
+
+}
+
+#me{
+  height: 200px;
+  width:200px;
+  border-style: solid;
+  border-radius: 50%;.
+  border-width: 5px;
+  border-color: white;
+  margin-top: 50px;
+}
+
+.about{
+  color:white;
+  padding: 4px;
+  background-color: #333;
+  line-height: 1.5;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 450px;
+  margin: 0 auto
+}
+
+.mid-logo{
+  width: 100%;
+  position: relative;
+}
+
+.tag-logo{
+  position: absolute;
+  top:-99px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+/* Section Clients */
+.img-client{
+  height: 100%;
+  width: 100%;
+}
+
+
+.sec-2{
+  background-color: #1f76bd;
+}
+
+
+
+/* Codepen Sample */
+
+
+
+
+/*.footer{
+  color:white;
+  padding: 4px;
+  line-height: 1.5;
+  font-size: .8em;
+  border-radius: 5px;
+}*/
+
+/*
+h2 defaul
+2
+h3 1.75
+
+*/
+/*Small Devides*/
+@media only screen and (max-width: 400px) { 
+
+.profile p{
+  font-size: .5em;
+}
+
+.profile h2{
+  font-size: 1.3em;
+}
+
+.profile h3{
+  font-size: .8em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+.tagline-left {
+     left: 0; 
+}
+
+.tagline .tg-part1 {
+    font-size: 2em;
+}
+
+.tagline .tg-part2 {
+    margin-left: 1px;
+}
+
+.tagline .tg-part3 {
+    font-size: 2em;
+}
+
+.tagline .tg-part4 {
+    font-size: 1em;
+}
+
+.visit{
+  display: block;
+  width: 110px;
+  margin: 0 auto;
+}
+
+}
+
+/*Medium Devices*/
+@media only screen and (min-width: 451px) and (max-width: 768px) { 
+
+
+.profile p{
+  font-size: .8em;
+}
+
+.profile h2{
+  font-size: 1.5em;
+}
+
+.profile h3{
+  font-size: 1em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+.tagline-left {
+     left: 0; 
+}
+
+.tagline .tg-part1 {
+    font-size: 2em;
+}
+
+.tagline .tg-part2 {
+    margin-left: 1px;
+}
+
+.tagline .tg-part3 {
+    font-size: 2em;
+}
+
+.tagline .tg-part4 {
+    font-size: 1em;
+}
+
+
+}
+
+/*Large Devices*/
+@media only screen and (min-width: 769px) { 
+
+
+.tagline .tg-part1 {
+    font-size: 3em;
+}
+
+.tagline .tg-part2 {
+    margin-left: 1px;
+}
+
+.tagline .tg-part3 {
+    font-size: 2em;
+}
+
+.tagline .tg-part4 {
+    font-size: 1.5em;
+}
+
+ }
+
+
+
+/* Bootstarp Custom layouts */
+
+.jumbotron {
+  background-size: 100% 100%;
+  color: #b0bec5;
+  margin-bottom: 0;
+}
+

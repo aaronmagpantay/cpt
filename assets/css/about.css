@@ -1,0 +1,152 @@
+/* Test CSS */
+
+.frame{
+  width: 100%;
+}
+
+.p-top{
+  padding-top: 75px;
+}
+
+/* About Section */
+.title-about{
+  text-align: center;
+}
+
+.bg-o-white{
+  background-color: #f2f2f2;
+}
+
+/* Staff Section */
+
+.key-col{
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 8%;
+
+}
+
+.img-staff{
+  	height: 100px;
+	width: 95px;
+	border-radius: 5px;
+}
+
+.staffs-commcube{
+  background-image: url("../images/staff-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.c-content h2{
+  padding-top: 15px;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.c-content figcaption{
+  padding-top: 7px;
+}
+
+.staff-content{
+  padding: 20px;
+}
+
+
+.about-name{
+	font-weight:700;
+}
+
+.about-title{
+	font-weight:300;
+}
+
+
+
+
+/*Small Devides*/
+@media only screen and (max-width: 400px) { 
+
+.profile p{
+  font-size: .5em;
+}
+
+.profile h2{
+  font-size: 1.3em;
+}
+
+.profile h3{
+  font-size: .8em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+.h2-about-staff{
+  text-align: center;
+}
+
+
+/*.frame{
+  height: 50vh;
+}*/
+
+
+}
+
+/*Medium Devices*/
+@media only screen and (min-width: 451px) and (max-width: 768px) { 
+
+
+.profile p{
+  font-size: .8em;
+}
+
+.profile h2{
+  font-size: 1.5em;
+}
+
+.profile h3{
+  font-size: 1em;
+}
+
+.carousel-item img{
+  height: 50vh;
+}
+
+.frame{
+  height: 43vh;
+}
+
+}
+
+/*Large Devices*/
+@media only screen and (min-width: 769px) { 
+
+
+.frame{
+  height: 58vh;
+}
+
+ }
+
+ @media only screen and (min-width: 770px) and (max-width: 992px) { 
+
+
+.frame{
+  height: 50vh;
+}
+
+ }
+
+  @media only screen and (min-width: 1201px) { 
+
+
+.frame{
+  height: 100vh;
+}
+
+ }

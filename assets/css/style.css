@@ -1,0 +1,527 @@
+
+html {
+	margin: 0;
+	padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+	
+	margin: 0;
+	padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Font Settings */
+.text-center{
+  text-align: center;
+}
+
+.text-indent{
+  text-indent: 40px;
+}
+/* Background Colors */
+.bg-whtie{
+  background-color: white;
+}
+
+.bg-o-black{
+  background-color: #141414;
+}
+
+.bg-o-white{
+  background-color: #f2f2f2;
+}
+
+.bg-dark-blue{
+ background-color: #115c9b; 
+}
+
+.bg-light-blue{
+ background-color: #1f76bd; 
+}
+
+.box-shadow{
+  box-shadow:  0 4px 6px hsla(0, 0%, 0%, 0.2);
+}
+
+.commcube-brand{
+  height: 40px;
+  width: 140px;
+}
+
+.font-w-7{
+  font-weight: 700;
+}
+
+.font-w-4{
+  font-weight: 700;
+}
+
+.nav-link{
+	cursor:pointer;
+}
+
+.attach-f{
+	padding:3px 0 0 3px;
+}
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.navbar img{
+  border-radius:5px;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.submit{
+  width: 82px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+/* Content */
+
+.our-mission-header{
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.bg-nav{
+    /*background-color: rgba(211,211,211,0.5);*/
+   /* background-color: #0099cc;*/
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+ /*   height: 75px;*/
+    transition: all 1s;
+
+}
+
+.contact-f{
+  border-bottom: 2px solid white;
+}
+
+.bg-pt{
+  padding-top: 75px;
+}
+
+/*
+For testing
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../../assets/images/p-loader.gif) center no-repeat #fff;
+}*/
+
+/*Custom Styles*/
+.center{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.f-b{
+  font-weight: bold;
+}
+
+.prlx { 
+    /* The image used */
+    background-image: url("../images/bg-body.jpg");
+
+    /* Set a specific height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+/* Navigation */
+
+.navbar{
+  position: fixed;
+  background-color: #0099cc;
+  z-index: 3;
+  width: 100%;
+  border-bottom: 10px solid white;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+.nav-bar{
+  background-color: #0099cc;
+}
+
+.nav-toggle{
+  background-color: #0099cc;
+  padding-top: 0;
+}
+
+.nav-bor-bot{
+  /* for testing in javascript
+   border-bottom: 0;
+  transition: all .5s;
+  position: fixed;
+  width: 100%; 
+  background-color: rgba( 59.104, -15.396, -35.554, 0.5) !important;
+  border:0 !important;
+  z-index: 9999;*/
+}
+
+.bg-nav{
+    /*background-color: rgba(211,211,211,0.5);*/ 
+    border-bottom: 1px solid white;
+    transition: all 1s;
+}
+
+.commcube-brand{
+  height: 40px;
+  width: 140px;
+}
+
+
+/*Paddings*/
+
+.margin-left-20p{
+  margin-left: 20%;
+}
+.margin-top-50{
+  margin-top: 50px;
+}
+
+.padding-top-50{
+ padding-top: 50px;
+}
+
+.padding-left-20{
+ padding-left: 20px;
+}
+
+.padding-c-content{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/*style for scroll*/
+
+p.scroll-text{
+  color:white;
+}
+
+
+
+/*#scrlBtn:hover {
+  background-color: lightgrey;
+}*/
+
+
+
+.container1{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+
+/*Profile Style*/
+
+.profile{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: linear-gradient(141deg, rgba(137,247,254, 0.5) 0%, rgba(31,200,219, 0.5) 51%, rgba(102,166,255, 0.5) 75%);
+}
+
+.c-content{
+  min-height: 300px;
+  background-color: #fafafa;
+  border-bottom: lightblue 1px solid;
+  border-top: lightblue 1px solid;
+}
+
+
+.c-content-height{
+  min-height: 250px;
+  padding-top: 25px;
+}
+
+.bg-color{
+  height: 100%;
+   /*background-color: #d3d3d3;*/
+  
+}
+
+.c-content h5{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.tools-icon1{
+  height: 30px;
+  width: 50px;
+}
+
+.tools-icon{
+  height: 30px;
+  width: 30px;
+}
+.c-capstones{
+  height: 100vh;
+  background-image: url("../images/c-bg-content.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.c-skills{
+  height: 100vh;
+  background-image: url("../images/c-bg-skills.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+h2.name{
+  margin: 0 auto;
+  background-color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+
+}
+
+h3.title{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 15px auto;
+  width: 50%;
+
+}
+
+#me{
+  height: 200px;
+  width:200px;
+  border-style: solid;
+  border-radius: 50%;.
+  border-width: 5px;
+  border-color: white;
+  margin-top: 50px;
+}
+
+.about{
+  color:white;
+  padding: 4px;
+  background-color: #333;
+  line-height: 1.5;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 450px;
+  margin: 0 auto
+}
+
+.mid-logo{
+  width: 100%;
+  position: relative;
+}
+
+.tag-logo{
+  position: absolute;
+  top:-99px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+/* Footer Styles */
+
+
+footer{
+  color: white;
+}
+.contact-f{
+  padding-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px white;
+  font-weight: bold;
+}
+
+.f-container{
+  background-color: #e5e5e5;
+  min-height: 250px;
+  padding: 20px 0;
+}
+
+.container-f{
+  padding: 0 5%;
+}
+
+.f-content{
+  background-color:  #0099cc;
+  height: 100%;
+
+}
+
+.map-google{
+  width: 250px;
+  height: 200px;
+}
+
+.soc-fonts{
+  font-size: 3em;
+/* unvisited link */
+
+}
+
+.soc-fonts a:link {
+    color: white;
+}
+
+/* visited link */
+.soc-fonts a:visited {
+    color: white;
+}
+
+/* mouse over link */
+.soc-fonts a:hover {
+    color: black;
+}
+
+/* selected link */
+.soc-fonts a:active {
+    color: #4dd7ff;
+}
+
+.copyright{
+  padding-bottom: 20px;
+}
+
+
+
+.footer-title{
+  text-align: center;
+}
+
+.title-under{
+    background: #fff;
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    width: 90%
+}
+
+
+.title-under:after{
+    content: '';
+    display: block;
+    width: 50%;
+    background: inherit;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*.footer{
+  color:white;
+  padding: 4px;
+  line-height: 1.5;
+  font-size: .8em;
+  border-radius: 5px;
+}*/
+
+/*
+h2 defaul
+2
+h3 1.75
+
+*/
+/*Small Devides*/
+@media only screen and (max-width: 400px) { 
+
+.profile p{
+  font-size: .5em;
+}
+
+.profile h2{
+  font-size: 1.3em;
+}
+
+.profile h3{
+  font-size: .8em;
+}
+
+
+}
+
+/*Medium Devices*/
+@media only screen and (min-width: 451px) and (max-width: 768px) { 
+
+
+.profile p{
+  font-size: .8em;
+}
+
+.profile h2{
+  font-size: 1.5em;
+}
+
+.profile h3{
+  font-size: 1em;
+}
+
+}
+
+/*Large Devices*/
+@media only screen and (min-width: 769px) { 
+
+
+ }

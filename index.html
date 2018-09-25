@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- sets the defaul zoom for ANY device -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- set compatibility for your browsers -->
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+	<title>CommCube BPO Services</title>
+
+	<!-- Import Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Import Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-lightbox.min.css">
+    <!-- Lightbox CDN 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+-->
+    <link rel="stylesheet" href="./assets/css/animate.css">
+
+    <link rel="shortcut icon" href="./assets/images/icon-panda.png">
+
+    <!-- General Style for all -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- Custom Style for Landing Page -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/custom.css">
+
+
+
+
+
+
+
+<style>
+.frmSearch {
+	border: 1px solid #a8d4b1;
+	background-color: #CDE0FA;
+	margin: 2px 0px;
+	padding:5px;
+	border-radius:4px;
+	cursor: pointer;
+	list-style-type: none;
+	font-size:10px;
+}
+#search-box{padding: 10px;border: #a8d4b1 1px solid;border-radius:4px;}
+
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(assets/images/loader.gif) center no-repeat #fff;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<i id="scrlBtn" class="arrow up"></i>
+
+<!-- <div class="se-pre-con"></div>  --> 	
+
+
+
+    
+
+
+
+
+	<!-- <nav class="navbar navbar-expand-md navbar-dark bg-fade bg-nav">
+      <a class="navbar-brand" href="index.html">
+      	<img src="./assets/images/commcube-logo.jpg" class="d-inline-block align-top commcube-brand" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-toggle" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./home.html">Home<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Find a Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forum</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Events</a>
+              <a class="dropdown-item" href="#">Schedule</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+
+<section class="fullsize-video-bg">
+<div class="bg-vid">
+<div class="homepage-hero-module">
+
+	<div class="inner">
+		
+		
+<h1 class="tagline tagline-left">
+<span class="tg-part1">Free</span>
+<span class="tg-part2">and</span>
+<span class="tg-part3">we</span>
+<br>
+<span class="tg-part4">always</span>
+<span class="tg-part5">will.</span>
+<br>
+<a href="./home.html" class="btn btn-success visit">Visit Page</a>
+</h1>
+
+	</div>
+	<div id="video-viewport">
+		<video width="1920" height="1280" autoplay muted loop>
+			<source src="assets/images/Typing.mp4" type="video/mp4" />
+			<source src="assets/images/Typing.webm" type="video/webm" />
+		</video>
+	</div>
+
+</div>	
+</div>
+</section>
+
+
+<!-- <div class="bg-pt">
+
+<div id="sampleCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+				<li data-target="#sampleCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#sampleCarousel" data-slide-to="1"></li>
+				<li data-target="#sampleCarousel" data-slide-to="2"></li>
+				<li data-target="#sampleCarousel" data-slide-to="3"></li>
+				</ol>
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+					<img class="d-block h-70 w-100" src="./assets/images/carousel-img-1.jpg" alt="First Image">
+					<div class="carousel-caption">
+					    <p class="bg-dark text-white"></p>
+					  </div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./assets/images/carousel-img-2.jpg" alt="Second Image">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./assets/images/carousel-img-3.jpg" alt="Third Image">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./assets/images/carousel-img-4.jpg" alt="Forth Image">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#sampleCarousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#sampleCarousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+	</div>
+</div>
+
+<!-- 
+
+<section class="c-content padding-c-content">
+	
+	<div class="bg-color">
+
+	<div class="container">
+		<div class="row">
+
+	
+
+			
+
+		</div>
+
+		
+	</div> 
+
+</section> --> 
+
+
+
+
+
+
+
+
+<section class="page sec-2 p-4">
+
+
+<div class="client-title">
+	<h3>Our Clients</h3>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/alorica.png" alt="amazon"></div>
+				<div class="side back">Alorica</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/amazon.png" alt="amazon"></div>
+				<div class="side back">Amazon</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/eperformax.png" alt="eperformax"></div>
+				<div class="side back">Eperformax</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/genpact.png" alt="genpact"></div>
+				<div class="side back">Genpact</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/hgs.png" alt="hgs"></div>
+				<div class="side back">HGS</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/iqor.png" alt="iqor"></div>
+				<div class="side back">iqor</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/teleperformance.png" alt="teleperformance"></div>
+				<div class="side back">Teleperformance</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12 p-2">
+		<div class="card-container">
+			<div class="card">
+				<div class="side"><img src="./assets/images/clients/vxi-logo.png" alt="vxi-logo"></div>
+				<div class="side back">VXI</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- Space for clients -->
+
+<!-- Lightbox not working -->
+<!-- <a data-toggle="lightbox" href="#demoLightbox">Open Lightbox</a>
+
+<div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+	<div class='lightbox-content'>
+		<img src="./assets/images/clients/amazon.png">
+		<div class="lightbox-caption"><p>Your caption here</p></div>
+	</div> -->
+</div>
+
+
+
+</section>
+
+<section class="page bg-o-white py-3">
+
+<div class="row container-sec-2 bg-white box-shadow">
+	<div class="col-lg-12 p-5 col-md-12 col-sm-12">
+		<h3 class="text-center">Company Overview</h3>
+		<p class="overview">
+CommCube was founded in January 2015 to give a chance to the Caviteños to learn more about the BPO/Call Center Industry. What started out as a simple free call center training project by the local government unit has evolved into an outstanding end-to-end HR solutions company. We aim to provide the perfect match between candidate and organization. Our end-to-end human capital solutions are tailored to suit our clients' needs for whatever function, domain and industry. We place highly-qualified candidates that are best suited to the job, keeping in mind the long-lasting, mutual advantage between our client and candidate. To ensure client satisfaction, we use an in-depth process for sourcing and screening candidates based on client requirements and needs. We believe that your success is our success.</p>
+<p>As a young, energetic, and dynamic company, CommCube services include sourcing potential candidates, recruitment of qualified applicants, and training potential hires to enhance language proficiency and comprehension skills necessary to provide international customer service and technical support.</p>
+	</div>
+</div>
+
+
+
+</section>
+
+<section class="page p-5">
+
+<div class="map-frame">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d966.0095218474116!2d120.942976!3d14.424968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe99d5fbcb2e22fb!2sCommCube+BPO+Support+Services!5e0!3m2!1sen!2sph!4v1537800306030" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+   	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/js/jquery-3.3.1.js"></script>
+    <!-- Lightbox JS(CDN) -->
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script> -->
+
+     <!-- for testing 
+    <script src="./assets/js/bootstrap-lightbox.js"></script>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    <script src="./assets/js/jquery.scrollify.js"></script>
+
+   
+
+
+
+    <!-- Waypoints JS 
+     <script src="./assets/js/noframework.waypoints.min.js"></script>
+-->
+    <!-- Javascript applied to all -->
+    <script src="./assets/js/custom.js" type="text/javascript"></script>	
+
+    <!-- This page javascripts -->
+    <script src="./assets/js/index.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

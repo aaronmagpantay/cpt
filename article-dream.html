@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- sets the defaul zoom for ANY device -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- set compatibility for your browsers -->
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+	<title>CommCube: Article</title>
+
+	<!-- Import Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Import Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <link rel="shortcut icon" href="./assets/images/icon-panda.png">
+
+    <!-- General Style for all -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+
+    <!-- Custom Style for Home -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/article.css">
+
+
+
+
+
+</head>
+<body>
+
+
+<i id="scrlBtn" class="arrow up"></i>
+
+
+
+    
+
+
+
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-fade bg-nav">
+      <a class="navbar-brand" href="./index.html">
+      	<img src="./assets/images/commcube-logo.jpg" class="d-inline-block align-top commcube-brand" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-toggle" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">Home<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./events.html">Events</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="./about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" data-toggle="modal" data-target="#signModal">Sign up</a>
+          </li>
+          <!-- forum link
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forum</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Events</a>
+              <a class="dropdown-item" href="#">Schedule</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+<!-- Modal -->
+
+<div class="modal fade text-dark" id="signModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          	<h5 class="modal-title" id="contactModalTitle">
+              Sign up
+            </h5>
+          	 <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <div class="modal-body">
+           <form>
+           	<!-- 
+            <form id="careers" method="POST" enctype="multipart/form-data">
+            
+					<?php
+						//Data for submittion				
+						if(isset($_POST['submitted1']))
+						{
+							$error = array();
+							//carFname, carLname, carEmail, carNum
+							(!empty($_POST['carFname'])) ? $carFname = ucwords(mysqli_real_escape_string($dbc, $_POST['carFname'])) : $error[] = 'Blank First Name field.' ;
+							(!empty($_POST['carLname'])) ? $carLname = ucwords(mysqli_real_escape_string($dbc, $_POST['carLname'])) : $error[] = 'Blank Last Name field.' ;
+							(!empty($_POST['carEmail'])) ? $carEmail = mysqli_real_escape_string($dbc, $_POST['carEmail']) : $error[] = 'Email field is required.' ;
+							(!empty($_POST['carNum'])) ? $carNum = mysqli_real_escape_string($dbc, $_POST['carNum']) : $error[] = 'Contact number field should not be empty.' ;
+											
+							$q = "select * from recaptcha_key order by id desc limit 1";
+							$r = @mysqli_query($dbc, $q);
+												
+							$row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+							$privatekey = $row['priKey'];
+											
+							if ((($_FILES['carFile']['type'] == 'application/msword')
+							|| ($_FILES['carFile']['type'] == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'))
+							&& ($_FILES['carFile']['type'] < 20000))
+							{
+								if ($_FILES['carFile']['error'] > 0)
+								{
+									echo 'An error has occured while uploading the file. Please try again later.';
+								}
+								else
+								{
+									if (file_exists('ccs4uadmin/uploadedresumes/' . $_FILES['carFile']['name'])) { $error[] = 'You already had submitted this resume.'; }
+								}
+							}
+							else
+							{
+								$error[] = 'Invalid file format or maximum file size exceeded.';
+							}
+											
+							if(empty($error))
+							{
+								$dateNgayon = date('Y-m-d H:i:s');
+								$ip = $_SERVER['REMOTE_ADDR'];
+								$full = $carLname . ', ' . $carFname;
+												
+								$filetype = $_FILES['carFile']['type'];
+								$filesize = round(($_FILES['carFile']['size'] / 1024), 2) . ' kb.';
+								$fileDir = 'http://ccs4uadmin/uploadedresumes/';
+										
+								$lastOcc = strrpos($_FILES['carFile']['name'],'.');
+								$fileLen = strlen($_FILES['carFile']['name']);
+								$fileExt = substr($_FILES['carFile']['name'],$lastOcc,$fileLen - $lastOcc);
+								$fullFile = str_replace(' ','',ucwords($carLname) . ucwords($carFname)) . '-' . date('m-d-y') . $fileExt;
+												
+								$q = "insert into uploadresume (res_fname,res_lname,res_full,res_email,res_num,res_date,res_ip,res_key,res_filename,res_filedir,res_filetype,res_filesize,res_tag) values ('$carFname','$carLname','$full','$carEmail','$carNum','$dateNgayon','$ip','1','$fullFile','$fileDir','$filetype','$filesize','no')";
+								$r = @mysqli_query($dbc, $q);
+								
+								
+								
+								//sends the email to jobs_hr@callcentersolution4u.com
+								$file = $_FILES['carFile']['tmp_name'];
+								require_once('send1.php');
+
+								
+								//saves to a folder				
+								move_uploaded_file($_FILES['carFile']['tmp_name'], "folder/path/" . $fullFile);
+												
+								echo ($r) ? 'Your resume has successfully been sent.' : 'An error has occured while uploading the form. Please try again later.';
+												
+							}
+							else
+							{
+								echo '<div><span class=""><b>An error has occured:</b><br><ul>';
+								foreach($error as $errors)
+								{
+									echo '<li style="color:red;">' . $errors . '</li>';
+								}
+								echo '</ul></span></div>';
+							}
+									
+						}
+									
+					?>            	
+            	
+            	 -->
+            	
+              <div class="form-group">
+                <label for="carFname">Full Name</label>
+                <input type="text" class="form-control" name="carFname">
+              </div>                          
+              <div class="form-group">
+                <label for="carEmail">Email</label>
+                <input type="email" class="form-control" name="carEmail">
+              </div>
+              <div class="form-group">
+                <label for="carFile">Attach Resume</label>
+                <input type="file" class="form-control attach-f" name="carFile">
+                <!-- <input type="hidden" name="submitted1" /> -->
+              </div>              
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+<section class="bg-o-white box-shadow mx-5 mb-3 p-top pb-2">
+	 <div class="article-container">
+	<div class="row">
+      <div class="col-sm-12">
+
+        <h2>The Impossible Dream</h2>
+        <p class="desc">As a former factory worker and service crew, I have experienced first-hand how <span class="font-weight-bold">working in the call center changed my life</span>. And so we built our dream on sharing this experience with others. When we first thought of providing a <span class="font-weight-bold">free</span> call center training for everyone, a lot of people said it’s never going to work. People around us said that if we do this, we will not last long. Nobody believed in us, but we pursued anyway. And so we started - February of 2015,  in a small barangay hall, as a local government project, we had our very first class. And it was a success! <span class="font-weight-bold">Almost everyone landed a job in the call center</span>. And from there, was history. Our trainees would <span class="font-weight-bold">get hired every single week</span>. Week after week. More and more trainees came in, and <span class="font-weight-bold">more and more got hired</span>. (<span class="font-italic">all of them were first timers</span>). Eventually, we had to relocate because we couldn't fit in the barangay hall anymore. And from there we helped even more people land a job in the call center. </p>
+
+        <img class="img-family py-3" src="./assets/images/index-sec-2.jpg" alt="commcube family">
+
+
+        <p class="desc">People from all walks of life come to us because <span class="font-weight-bold">we treat everyone with respect, and like a family</span>. We exert 101% effort to help anyone who wants to learn, and we will not stop until there is a single person who needs us.</p>
+
+
+        <img class="img-family py-3 ms-auto" src="./assets/images/index-sec-2-2.jpg" alt="commcube family">
+
+
+        <p class="desc">Even after 130 waves of trainees, and thousands of fresh call center agents later, we still train with the same passion and high level for <span class="font-weight-bold">FREE, and we always will</span>.</p>
+
+        <p class="desc font-italic">If <span class="font-weight-bold">nobody</span> believes in you, come to us. Because <span class="font-weight-bold">we will</span>.</p>
+
+        <p class="desc">If you are interested, our training is always free and starts <span class="font-weight-bold">every Monday @ 11am in FRC Mall, Aguinaldo Highway Imus, Cavite</span>. Come and join us now! </p>
+
+
+      </div>
+
+    </div>
+
+</div>
+
+
+          <div class="back">
+             <button class="btn btn-back" onclick="goBack()">Go Back</button>
+          </div>
+
+</section>
+
+
+
+
+<footer>
+
+<div class="f-container padding-top-50">
+
+	<div class="f-content">
+	<div class="container-f">
+		<div class="row">
+
+
+
+
+			<!-- Contact Us -->
+			<div class="footer-c col-lg-4 col-sm-12 text-left margin-top-40p">
+
+
+				<nav>
+
+					<ul class="list-unstyled">
+						<li>
+							<h4 class="footer-title pt-5">Contact Us<span class="title-under"></span></h4>
+						</li>
+						<li class="padding-left-20">
+							<br>
+							<p><i class="far fa-clock"></i> Open: 10:00 AM - 6:00 PM</p>
+						</li>
+						<li class="padding-left-20">							
+							<p><i class="fas fa-mobile-alt"></i> Mobile: 0932 250 0290</p>
+						</li>
+						<li class="padding-left-20">							
+							<p><i class="fas fa-map-marker"></i> 3rd Level FRC Mall (Puregold Imus)
+Imus, Cavite</p>
+						</li>
+						<li class="padding-left-20">
+							<p><i class="fas fa-at"></i> Email address: info@commcube.com</p>
+						</li>
+
+
+					</ul>
+
+				</nav>
+
+
+			</div>
+
+
+			<!-- Social Media -->
+			<div class="footer-c col-lg-4 col-sm-12 text-left margin-top-40p">
+
+
+        <nav class="social">
+       
+          
+        <h4 class="footer-title pt-5">Connect with Us<span class="title-under"></span></h4>
+        <p class="text-center soc-fonts">
+          <a href="https://www.facebook.com/commcube/" class="padding-left-20"><i id="soc-icon1" class="fab fa-facebook-square animated"></i></a>
+          <a href="#" class="padding-left-20"><i id="soc-icon2" class="fab fa-twitter animated"></i></a>
+          <a href="#" class="padding-left-20"><i id="soc-icon3" class="fab fa-instagram animated"></i></a>
+        </p>
+
+        </nav>
+
+
+
+		</div>
+
+
+			<!-- Location -->
+			<div class="footer-c col-lg-4 col-sm-12 text-center margin-top-40p">
+
+			<h4 class="footer-title pt-5">Find Us<span class="title-under"></span></h4>
+				<section>
+					<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.5024367327669!2d120.94294405715289!3d14.424916098528207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d25f4b0099d7%3A0xfe99d5fbcb2e22fb!2sCommCube+BPO+Support+Services!5e0!3m2!1sen!2sph!4v1537332554633" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+
+			</div>
+
+
+		</div>   <!-- end of row for footer -->
+
+		</div>
+		<div class="center text-center copyright"><small class="text-center">Commcube | @ 2018</small></div>
+
+		</div>
+
+	</div> <!-- End of Container for footer -->
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+   	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Waypoints JS -->
+     <script src="./assets/js/noframework.waypoints.min.js"></script>
+     
+    <!-- Javascript applied to all -->
+    <script src="./assets/js/custom.js" type="text/javascript"></script>	
+
+    <!-- This page javascripts -->
+    <script src="./assets/js/about.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
