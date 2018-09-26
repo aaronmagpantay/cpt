@@ -15,24 +15,27 @@ For testing
 .client-title > h3{
   font-weight: 700;
   text-align: center;
+  margin-top:5%;
+  color: white;
 }
 
 /* Section 2 */
 
 .card-container {
+	
   cursor: pointer;
   height: 100px;
   perspective: 600;
   position: relative;
   width: 100%;
-  background-color: #f2f2f2;
+ /* background-color: #f2f2f2;*/
 }
 
 .card {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
   width: 100%;
 }
 .card:hover {
@@ -58,6 +61,8 @@ For testing
   line-height: 100px;
   text-align: center;
   transform: rotateY(180deg);
+  font-size: 2em;
+  font-weight: 700;
 }
 
 
@@ -452,6 +457,19 @@ h3 1.75
   width: 110px;
   margin: 0 auto;
 }
+
+.card {
+    height: 65%;
+ }   
+    
+.card .back {
+    line-height: 62px;
+}
+    
+.client-title > h3{
+  margin-top:0;
+}
+
 
 }
 

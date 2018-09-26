@@ -69,15 +69,7 @@
           <li class="nav-item">
                <a class="nav-link" data-toggle="modal" data-target="#signModal">Sign up</a>
           </li>
-          <!-- forum link
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forum</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Events</a>
-              <a class="dropdown-item" href="#">Schedule</a>
-            </div>
-          </li> -->
         </ul>
       </div>
     </nav>
@@ -97,91 +89,7 @@
           </div>
           <div class="modal-body">
            <form>
-           	<!-- 
-            <form id="careers" method="POST" enctype="multipart/form-data">
-            
-					<?php
-						//Data for submittion				
-						if(isset($_POST['submitted1']))
-						{
-							$error = array();
-							//carFname, carLname, carEmail, carNum
-							(!empty($_POST['carFname'])) ? $carFname = ucwords(mysqli_real_escape_string($dbc, $_POST['carFname'])) : $error[] = 'Blank First Name field.' ;
-							(!empty($_POST['carLname'])) ? $carLname = ucwords(mysqli_real_escape_string($dbc, $_POST['carLname'])) : $error[] = 'Blank Last Name field.' ;
-							(!empty($_POST['carEmail'])) ? $carEmail = mysqli_real_escape_string($dbc, $_POST['carEmail']) : $error[] = 'Email field is required.' ;
-							(!empty($_POST['carNum'])) ? $carNum = mysqli_real_escape_string($dbc, $_POST['carNum']) : $error[] = 'Contact number field should not be empty.' ;
-											
-							$q = "select * from recaptcha_key order by id desc limit 1";
-							$r = @mysqli_query($dbc, $q);
-												
-							$row = mysqli_fetch_array($r, MYSQLI_ASSOC);
-							$privatekey = $row['priKey'];
-											
-							if ((($_FILES['carFile']['type'] == 'application/msword')
-							|| ($_FILES['carFile']['type'] == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'))
-							&& ($_FILES['carFile']['type'] < 20000))
-							{
-								if ($_FILES['carFile']['error'] > 0)
-								{
-									echo 'An error has occured while uploading the file. Please try again later.';
-								}
-								else
-								{
-									if (file_exists('ccs4uadmin/uploadedresumes/' . $_FILES['carFile']['name'])) { $error[] = 'You already had submitted this resume.'; }
-								}
-							}
-							else
-							{
-								$error[] = 'Invalid file format or maximum file size exceeded.';
-							}
-											
-							if(empty($error))
-							{
-								$dateNgayon = date('Y-m-d H:i:s');
-								$ip = $_SERVER['REMOTE_ADDR'];
-								$full = $carLname . ', ' . $carFname;
-												
-								$filetype = $_FILES['carFile']['type'];
-								$filesize = round(($_FILES['carFile']['size'] / 1024), 2) . ' kb.';
-								$fileDir = 'http://ccs4uadmin/uploadedresumes/';
-										
-								$lastOcc = strrpos($_FILES['carFile']['name'],'.');
-								$fileLen = strlen($_FILES['carFile']['name']);
-								$fileExt = substr($_FILES['carFile']['name'],$lastOcc,$fileLen - $lastOcc);
-								$fullFile = str_replace(' ','',ucwords($carLname) . ucwords($carFname)) . '-' . date('m-d-y') . $fileExt;
-												
-								$q = "insert into uploadresume (res_fname,res_lname,res_full,res_email,res_num,res_date,res_ip,res_key,res_filename,res_filedir,res_filetype,res_filesize,res_tag) values ('$carFname','$carLname','$full','$carEmail','$carNum','$dateNgayon','$ip','1','$fullFile','$fileDir','$filetype','$filesize','no')";
-								$r = @mysqli_query($dbc, $q);
-								
-								
-								
-								//sends the email to jobs_hr@callcentersolution4u.com
-								$file = $_FILES['carFile']['tmp_name'];
-								require_once('send1.php');
-
-								
-								//saves to a folder				
-								move_uploaded_file($_FILES['carFile']['tmp_name'], "folder/path/" . $fullFile);
-												
-								echo ($r) ? 'Your resume has successfully been sent.' : 'An error has occured while uploading the form. Please try again later.';
-												
-							}
-							else
-							{
-								echo '<div><span class=""><b>An error has occured:</b><br><ul>';
-								foreach($error as $errors)
-								{
-									echo '<li style="color:red;">' . $errors . '</li>';
-								}
-								echo '</ul></span></div>';
-							}
-									
-						}
-									
-					?>            	
-            	
-            	 -->
-            	
+           	
               <div class="form-group">
                 <label for="carFname">Full Name</label>
                 <input type="text" class="form-control" name="carFname">
@@ -213,7 +121,7 @@
     <li data-target="#eventcarousel" data-slide-to="1"></li>
     <li data-target="#eventcarousel" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="height: 90vh;">
     <div class="carousel-item active">
       <img class="d-block w-100" src="./assets/images/event1.jpg" alt="First slide">
     </div>
@@ -328,9 +236,9 @@ Imus, Cavite</p>
           
         <h4 class="footer-title pt-5">Connect with Us<span class="title-under"></span></h4>
         <p class="text-center soc-fonts">
-          <a href="https://www.facebook.com/commcube/" class="padding-left-20"><i id="soc-icon1" class="fab fa-facebook-square animated"></i></a>
-          <a href="#" class="padding-left-20"><i id="soc-icon2" class="fab fa-twitter animated"></i></a>
-          <a href="#" class="padding-left-20"><i id="soc-icon3" class="fab fa-instagram animated"></i></a>
+          <a href="https://www.facebook.com/commcube/" class=""><i id="soc-icon1" class="fab fa-facebook-square animated"></i></a>
+    <!--       <a href="#" class="padding-left-20"><i id="soc-icon2" class="fab fa-twitter animated"></i></a>
+          <a href="#" class="padding-left-20"><i id="soc-icon3" class="fab fa-instagram animated"></i></a> -->
         </p>
 
 
@@ -402,7 +310,7 @@ Imus, Cavite</p>
     <script src="./assets/js/custom.js" type="text/javascript"></script>	
 
     <!-- This page javascripts -->
-    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/events.js"></script>
 
 </body>
 </html>

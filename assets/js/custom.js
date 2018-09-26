@@ -5,9 +5,9 @@ $(document).ready(function(){
 
 //load function not working
 // $(window).load(function() {
-//         // Animate loader off screen
-//         $(".se-pre-con").css("visibility", "none");;
-//     });
+        // // Animate loader off screen
+        // $(".se-pre-con").css("visibility", "none");;
+    // });
 
 $("#scrlBtn").click(function() {
      $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -134,17 +134,30 @@ function fitVideo() {
 
 
 
-
-
-
-// Codepen
-
-
-
-
-
-
-
-
-
 });
+
+
+
+//footer social icons animation
+// 
+  // var waypointSoc = new Waypoint({
+    // element: document.getElementById('kproc'),
+    // handler: function() {
+      // $('#soc-icon1').addClass('jello');
+    // },
+    // offset: '80%'
+  // })
+  // var waypointSoc1 = new Waypoint({
+    // element: document.getElementById('kproc1'),
+    // handler: function() {
+      // $('#soc-icon2').addClass('jello');
+    // },
+    // offset: '80%'
+  // })
+  // var waypointSoc2 = new Waypoint({
+    // element: document.getElementById('kproc2'),
+    // handler: function() {
+      // $('#soc-icon3').addClass('jello');
+    // },
+    // offset: '80%'
+  // })
