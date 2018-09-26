@@ -5,6 +5,11 @@ window.onload = function(){
     $(".se-pre-con").css("display", "none");
 };
 
+$("#scrlBtn").click(function() {
+     $("html, body").animate({ scrollTop: 0 }, "slow");
+     return false;
+});
+
 $(document).ready(function(){
  
 
@@ -14,10 +19,7 @@ $(document).ready(function(){
         // $(".se-pre-con").css("visibility", "none");
     // });
 
-$("#scrlBtn").click(function() {
-     $("html, body").animate({ scrollTop: 0 }, "slow");
-     return false;
-});
+
 
 window.onscroll = function() {scrollFunction()};
  
