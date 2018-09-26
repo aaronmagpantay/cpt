@@ -19,6 +19,35 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+
+
+/* Load CSS */
+.frmSearch {
+  border: 1px solid #a8d4b1;
+  background-color: #CDE0FA;
+  margin: 2px 0px;
+  padding:5px;
+  border-radius:4px;
+  cursor: pointer;
+  list-style-type: none;
+  font-size:10px;
+}
+#search-box{padding: 10px;border: #a8d4b1 1px solid;border-radius:4px;}
+
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(assets/images/loader.gif) center no-repeat #fff;
+}
+
+
 /* Font Settings */
 .text-center{
   text-align: center;

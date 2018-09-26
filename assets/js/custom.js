@@ -1,17 +1,21 @@
 // Loader
 
+window.onload = function(){
+
+    $(".se-pre-con").css("display", "none");
+};
+
 $(document).ready(function(){
  
 
 //load function not working
 // $(window).load(function() {
         // // Animate loader off screen
-        // $(".se-pre-con").css("visibility", "none");;
+        // $(".se-pre-con").css("visibility", "none");
     // });
 
 $("#scrlBtn").click(function() {
-     $("html, body").animate({ scrollTop: 0 }, "slow");
-     return false;
+     
 });
 
 window.onscroll = function() {scrollFunction()};
